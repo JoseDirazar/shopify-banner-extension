@@ -1,0 +1,45 @@
+{
+  "name": "checkout-banner-extension",
+  "version": "0.1.0",
+  "description": "Internal package for Gadget app checkout-banner-extension (Development environment)",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "vite:build": "NODE_ENV=production vite build",
+    "shopify": "shopify",
+    "build": "shopify app build",
+    "dev": "shopify app dev",
+    "info": "shopify app info",
+    "generate": "shopify app generate",
+    "deploy": "shopify app deploy"
+  },
+  "dependencies": {
+    "@gadget-client/checkout-banner-extension": "link:.gadget/client",
+    "@gadgetinc/react": "^0.15.10",
+    "@gadgetinc/react-shopify-app-bridge": "^0.15.2",
+    "@shopify/app-bridge-react": "4.0.0",
+    "@shopify/polaris": "^12.0.0",
+    "@shopify/polaris-icons": "^8.1.0",
+    "gadget-server": "link:.gadget/server",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "6.15.0",
+    "shopify-api-node": "^3.12.6"
+  },
+  "devDependencies": {
+    "@shopify/cli": "^3.61.0",
+    "@types/node": "^20.8.4",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react-swc": "3.2.0",
+    "typescript": "^5.4.5",
+    "vite": "^4.4.9"
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610",
+  "workspaces": [
+    "extensions/*"
+  ],
+  "trustedDependencies": [
+    "@shopify/plugin-cloudflare"
+  ]
+}
