@@ -16,7 +16,7 @@ type = "ui_extension"
 # https://shopify.dev/docs/api/checkout-ui-extensions/unstable/extension-targets-overview
 
 [[extensions.targeting]]
-target = "purchase.checkout.delivery-address.render-before"
+target = "purchase.checkout.block.render"
 module = "./src/Checkout.jsx"
 export = "deliveryAddress"
 

@@ -8,6 +8,7 @@ embedded = true
 
 [build]
 dev_store_url = "checkout-banner-extension.myshopify.com"
+include_config_on_deploy = true
 
 [auth]
 redirect_urls = [
