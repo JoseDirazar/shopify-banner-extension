@@ -11,8 +11,8 @@ export const schema: GadgetModel = {
       type: "string",
       shopifyMetafield: {
         privateMetafield: false,
-        namespace: "banner-data",
-        key: "banner",
+        namespace: "banner-title",
+        key: "banner-title",
         metafieldType: "single_line_text_field",
         allowMultipleEntries: false,
       },
