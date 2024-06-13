@@ -14,7 +14,8 @@ import {
 } from "@shopify/polaris";
 import { StoreIcon } from "@shopify/polaris-icons";
 import { api } from "../api";
-import { BannerForm } from "../components/BannerForm";
+import { BannerTitleForm } from "../components/BannerForm";
+import { BannerMessageForm } from "../components/BannerMessageForm";
 
 const gadgetMetaQuery = `
   query {
@@ -31,11 +32,11 @@ export default function () {
   });
 
   const [{ data: shopData, fetching: shopFetching, error: shopFetchError }] =
-  useFindFirst(api.shopifyShop, {
-    select: {
-      id: true,
-    },
-  });
+    useFindFirst(api.shopifyShop, {
+      select: {
+        id: true,
+      },
+    });
 
   if (shopFetching || fetchingGadgetMeta) {
     return (
@@ -52,12 +53,12 @@ export default function () {
       </div>
     );
   }
-  console.log({shopData})
   return (
     <Page title="App">
       <Layout>
         <Layout.Section>
-        <BannerForm shop={shopData} />
+          <BannerTitleForm shop={shopData} />
+          <BannerMessageForm shop={shopData} />
         </Layout.Section>
       </Layout>
     </Page>

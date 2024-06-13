@@ -170,7 +170,8 @@ export const permissions: GadgetPermissions = {
           actions: {
             install: true,
             reinstall: true,
-            saveBannerMetaobject: true,
+            saveBannerMessage: true,
+            saveBannerTitle: true,
             uninstall: true,
             update: true,
           },
