@@ -14,8 +14,7 @@ import {
 } from "@shopify/polaris";
 import { StoreIcon } from "@shopify/polaris-icons";
 import { api } from "../api";
-import { BannerTitleForm } from "../components/BannerForm";
-import { BannerMessageForm } from "../components/BannerMessageForm";
+import { BannerForm } from "../components/BannerForm";
 
 const gadgetMetaQuery = `
   query {
@@ -57,8 +56,7 @@ export default function () {
     <Page title="App">
       <Layout>
         <Layout.Section>
-          <BannerTitleForm shop={shopData} />
-          <BannerMessageForm shop={shopData} />
+          <BannerForm shop={shopData} />
         </Layout.Section>
       </Layout>
     </Page>

@@ -19,13 +19,9 @@ function Extension() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        if (titleMetafield) {
-          const title = titleMetafield.metafield.value;
-          //const message = messageMetafield.metafield.value;
-          console.log("TITLE", title);
-          setBannerTitle(title);
-          //setBannerMessage(message);
-        }
+        if (titleMetafield) setBannerTitle(titleMetafield.metafield.value);
+        if (messageMetafield)
+          setBannerMessage(messageMetafield.metafield.value);
       } catch (error) {
         throw new Error(error);
       }
@@ -36,7 +32,9 @@ function Extension() {
   console.log({ bannerTitle, messageMetafield });
   return (
     <>
-      <Banner title="new-banner">SDFS</Banner>
+      <Banner status="info" title={bannerTitle}>
+        {bannerMessage}
+      </Banner>
     </>
   );
 }
